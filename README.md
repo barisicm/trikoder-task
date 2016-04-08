@@ -43,3 +43,52 @@ Rješenje nam pošaljite u obliku zip datoteke (ili poveznice na datoteku / repo
 + [Simple view](http://dbrekalo.github.io/simpleView/) (view component boilerplate)
 + [Simple lightbox](http://dbrekalo.github.io/simpleLightbox/) (lightbox / image modal plugin)
 + [Fast search](https://github.com/dbrekalo/fastsearch) (quick search / autocomplete plugin)
+
+---
+
+# Trikoder front-end assignment
+A few tasks need to be completed on a prepared static webpage. The main part of the page is completed - html is prepared, css styles and js interactions are written, and processing of front-end resources is automated.
+
+The project can be downloaded from: http://gitlab-test.trikoder.net/trikoder/frontend-zadatak. Considering it is a git repository - you will get extra points if you solve the  assignment with nicely formed commits.
+
+## Installation
+Setup project with: 
+```npm install```
+
+Start development:
+```npm start```
+
+(In case the previous command doesn’t work, try `npm run watch:development`)
+
+## Assignment:
++ We are missing a photo gallery module in the right column.
+Check attached design (design.png) and prepare HTML, CSS (SCSS), and JS files.
+When you click on a thumbnail, a large image should be shown in a modal window / lightbox.
+Since the attached design is png format, the module doesn’t have to be pixel perfect. Images in small and large variations can be found in “public/images” directory.
+
++ Optimized, minified images should be prepared for users. Find and set up a grunt task which will do image minification automatically.
+
++ Click on the “Sign in” button, and a modal window with login form should appear.
+In the current (not ideal) implementation, content (html) of the form is placed in a hidden module at the bottom of the page which gets cloned when the lightbox is created.
+Update the code so that content of the form is fetched from a url (in public directory you can find prepared login-modal.html which can be fetched when needed)
+
++ Front-end resources which are not essential for initial viewing of the page should be loaded only when users need them.
+
++ Update code for search so that ```fast search plugin``` loads after users start typing in the search box
+
++ Try to do something similar for the photo gallery, so the lightbox plugin loads after a user clicks on one of the thumbnails
+
++ Extra points if you load CSS resources for the above examples only when needed
+
+## Sending solution
+Send solution as zip file (or link to folder / repository) at posao@trikoder.net
+
+## Used technologies
++ [Sass](http://sass-lang.com/) (CSS Preprocessor)
++ [jQuery](https://jquery.com/) (JS library)
++ [Grunt](http://gruntjs.com/) (JS task runner)
++ [webpack](https://webpack.github.io/) (module bundler)
++ [Simple view](http://dbrekalo.github.io/simpleView/) (view component boilerplate)
++ [Simple lightbox](http://dbrekalo.github.io/simpleLightbox/) (lightbox / image modal plugin)
++ [Fast search](https://github.com/dbrekalo/fastsearch) (quick search / autocomplete plugin)
+
