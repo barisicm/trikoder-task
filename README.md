@@ -1,7 +1,7 @@
 # Trikoder front-end zadatak
 Potrebno je dovršiti nekolicinu zadatka na pripremljenoj statičnoj stranici. Glavni dio stranice je postavljen - html je pripremljen, napisani su css stilovi i interakcije u javascriptu, procesiranje front-end resursa je automatizirano.
 
-Projekt se može preuzeti sa adrese http://gitlab-test.trikoder.net/trikoder/frontend-zadatak. Obzirom da je riječ o git repozitoriju - dajemo plus ako zadaće u nastavku rješavate putem lijepo formiranih commit-ova.
+Projekt se može preuzeti sa adrese https://gitlab.trikoder.net/hr/frontend-zadatak. Obzirom da je riječ o git repozitoriju - dajemo plus ako zadaće u nastavku rješavate putem lijepo formiranih commit-ova.
 
 ## Instalacija
 Projekt podesite tako da u konzolu upišete:
@@ -49,7 +49,7 @@ Rješenje nam pošaljite u obliku zip datoteke (ili poveznice na datoteku / repo
 # Trikoder front-end assignment
 A few tasks need to be completed on a prepared static webpage. The main part of the page is completed - html is prepared, css styles and js interactions are written, and processing of front-end resources is automated.
 
-The project can be downloaded from: http://gitlab-test.trikoder.net/trikoder/frontend-zadatak. Considering it is a git repository - you will get extra points if you solve the  assignment with nicely formed commits.
+The project can be downloaded from: https://gitlab.trikoder.net/hr/frontend-zadatak. Considering it is a git repository - you will get extra points if you solve the  assignment with nicely formed commits.
 
 ## Installation
 Setup project with: 
