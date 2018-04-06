@@ -127,6 +127,11 @@
 	            e.preventDefault();
 	            this.showLoginModal();
 
+	        },
+	        'click .imageThumbnail': function(e) {
+	            console.log(e.target.currentSrc);
+	            e.preventDefault();
+	            this.showGalleryModal(e.target.currentSrc);
 	        }
 	    },
 
@@ -136,7 +141,6 @@
 	        this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
 
 	        return this;
-
 	    },
 
 	    showLoginModal: function(e) {
@@ -145,6 +149,18 @@
 
 	            var LoginModal = __webpack_require__(9);
 	            new LoginModal();
+
+	        });
+
+	    },
+
+	    showGalleryModal: function(e) {
+
+	        
+	        __webpack_require__.e/* nsure */(2, function(){
+
+	            var GalleryModal = __webpack_require__(11);
+	            new GalleryModal(e);
 
 	        });
 

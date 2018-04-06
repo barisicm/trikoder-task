@@ -19,6 +19,11 @@ module.exports = View.extend({
             e.preventDefault();
             this.showLoginModal();
 
+        },
+        'click .imageThumbnail': function(e) {
+            console.log(e.target.currentSrc);
+            e.preventDefault();
+            this.showGalleryModal(e.target.currentSrc);
         }
     },
 
@@ -28,7 +33,6 @@ module.exports = View.extend({
         this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
 
         return this;
-
     },
 
     showLoginModal: function(e) {
@@ -37,6 +41,18 @@ module.exports = View.extend({
 
             var LoginModal = require('js/components/loginModal');
             new LoginModal();
+
+        });
+
+    },
+
+    showGalleryModal: function(e) {
+
+        
+        require.ensure([], function(){
+
+            var GalleryModal = require('js/components/galleryModal');
+            new GalleryModal(e);
 
         });
 
