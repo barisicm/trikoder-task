@@ -1,7 +1,7 @@
 webpackJsonp([1],{
 
 /***/ 9:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
 	var View = __webpack_require__(3);
@@ -22,10 +22,10 @@ webpackJsonp([1],{
 	});
 
 
-/***/ },
+/***/ }),
 
 /***/ 10:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(factory) {
 
@@ -423,6 +423,6 @@ webpackJsonp([1],{
 	}));
 
 
-/***/ }
+/***/ })
 
 });
