@@ -412,9 +412,15 @@ webpackJsonp([2],{
 	module.exports = View.extend({
 
 	    initialize: function(options) {
-	        console.log(options);
+
+	        var sourceSplit = options.split("/");
+	        var stringToChange = sourceSplit[sourceSplit.length-1].replace(/Small/,"Large");
+	        //stringToChange.replace(/Small/i, "Large");
+	        sourceSplit[sourceSplit.length-1] = stringToChange;
+	        console.log(stringToChange);
+	        console.log(sourceSplit);
 	        $.simpleLightbox.open({
-	            content: "<div><img src="+options+"></div>",
+	            content: "<div><img src="+sourceSplit.join('/')+"></div>",
 	            elementClass: 'slbContentEl'
 	        });
 
