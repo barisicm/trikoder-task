@@ -407,20 +407,25 @@ webpackJsonp([2],{
 	var $ = __webpack_require__(2);
 	var View = __webpack_require__(3);
 
-	__webpack_require__(10);
+
 
 	module.exports = View.extend({
 
 	    initialize: function(options) {
-
+	        __webpack_require__(10);
 	        var sourceSplit = options.split("/");
 	        var stringToChange = sourceSplit[sourceSplit.length-1].replace(/Small/,"Large");
-	        //stringToChange.replace(/Small/i, "Large");
 	        sourceSplit[sourceSplit.length-1] = stringToChange;
-	        console.log(stringToChange);
-	        console.log(sourceSplit);
+
+	        var img = new Image();
+	        img.onload = function() {
+	          
+	        }
+	        img.src = sourceSplit.join('/');
+	        
 	        $.simpleLightbox.open({
-	            content: "<div><img src="+sourceSplit.join('/')+"></div>",
+	            //sourceSplit.join('/')
+	            content: img,
 	            elementClass: 'slbContentEl'
 	        });
 

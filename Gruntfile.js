@@ -1,10 +1,23 @@
 module.exports = function(grunt) {
 
+    const mozjpeg = require('imagemin-mozjpeg');
+
     grunt.initConfig({
 
         settings: {
             srcPath: 'src/',
             distPath: 'public/'
+        },
+
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'public/images/gallery/',
+                    src: ['**/*.jpg'],
+                    dest: 'public/images/minified/'
+                }]
+            }
         },
 
         sass: {
@@ -104,7 +117,8 @@ module.exports = function(grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.registerTask('default', ['imagemin']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'jscs', 'sass', 'includereplace', 'sync']);
 
