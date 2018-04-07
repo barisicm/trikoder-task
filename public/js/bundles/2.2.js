@@ -407,24 +407,22 @@ webpackJsonp([2],{
 	var $ = __webpack_require__(2);
 	var View = __webpack_require__(3);
 
-
-
 	module.exports = View.extend({
 
 	    initialize: function(options) {
 	        __webpack_require__(10);
-	        var sourceSplit = options.split("/");
-	        var stringToChange = sourceSplit[sourceSplit.length-1].replace(/Small/,"Large");
-	        sourceSplit[sourceSplit.length-1] = stringToChange;
+
+	        var urlSplit = options.split("/");
+	        var imageName = urlSplit[urlSplit.length-1].replace(/Small/,"Large");
+	        urlSplit[urlSplit.length-1] = imageName;
 
 	        var img = new Image();
 	        img.onload = function() {
-	          
+	            this.src = urlSplit.join('/');
 	        }
-	        img.src = sourceSplit.join('/');
+	        //img.src = urlSplit.join('/');
 	        
 	        $.simpleLightbox.open({
-	            //sourceSplit.join('/')
 	            content: img,
 	            elementClass: 'slbContentEl'
 	        });

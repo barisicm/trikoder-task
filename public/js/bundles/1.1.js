@@ -12,11 +12,20 @@ webpackJsonp([1],{
 
 	    initialize: function(options) {
 	        __webpack_require__(10);
-	        $.simpleLightbox.open({
-	            content: $('.loginModal').clone(),
-	            elementClass: 'slbContentEl'
-	        });
 
+	        $.get('login-modal.html', null, function(data, status){
+	            if (status == "success")
+	            {
+	                $.simpleLightbox.open({
+	                    content: data,
+	                    elementClass: 'slbContentEl'
+	                });
+	            }
+	            else
+	            {
+	                console.log('This cool code failed to load the modal.')
+	            }
+	        }, "html")
 	    }
 
 	});

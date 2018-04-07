@@ -120,6 +120,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['imagemin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'jscs', 'sass', 'includereplace', 'sync']);
+    grunt.registerTask('build', ['jshint', 'jscs', 'sass', 'includereplace', 'sync', 'imagemin']);
 
 };
