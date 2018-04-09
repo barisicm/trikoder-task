@@ -11219,12 +11219,12 @@
 
 	var View = __webpack_require__(3);
 
-	__webpack_require__(8);
+
 
 	module.exports = View.extend({
 
 	    initialize: function() {
-
+	        __webpack_require__(8);
 	        this.$('.query').fastsearch({
 	            onItemSelect: 'fillInput'
 	        });

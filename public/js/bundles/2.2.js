@@ -417,10 +417,8 @@ webpackJsonp([2],{
 	        urlSplit[urlSplit.length-1] = imageName;
 
 	        var img = new Image();
-	        img.onload = function() {
-	            this.src = urlSplit.join('/');
-	        }
-	        //img.src = urlSplit.join('/');
+	        img.onload = function(){}
+	        img.src = urlSplit.join('/');
 	        
 	        $.simpleLightbox.open({
 	            content: img,
